@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art of Gani - Shop Premium Products</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #ffe4e1);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.2rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      border-radius: 0 0 40px 40px;
+      box-shadow: inset 0 0 50px rgba(0,0,0,0.4);
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      filter: brightness(0.95);
+      border-bottom: 1px solid #ddd;
+      border-radius: 15px 15px 0 0;
+    }
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .card-content h3 {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 0.3rem;
+    }
+    .card-content p {
+      font-size: 0.95rem;
+      margin-bottom: 0.8rem;
+      color: #555;
+    }
+    .price {
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .discount {
+      color: #4caf50;
+      margin-left: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    footer {
+      background: #1f1c2c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 1rem;
+      border-radius: 20px 20px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Art of Gani</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Art of Gani!</h2>
+    <p>Explore 100+ premium, colorful, 3D-styled products — T-shirts, Hoodies, Watches, Shirts, Shoes & Snacks.</p>
+  </section>
+
+  <section class="products">
+    <!-- Existing Products -->
+    <div class="card">
+      <img src="https://veirdo.in/cdn/shop/files/5_1_45b82bbc-f648-4ca5-a2cd-97f50e53be93.jpg?v=1732275230" alt="Premium T-Shirt" />
+      <div class="card-content">
+        <h3>Premium T-Shirt</h3>
+        <p>Soft cotton, summer-ready comfort wear.</p>
+        <p class="price">₹499 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/71z2fpzbPVL._AC_UY1100_.jpg" alt="Warm Hoodie" />
+      <div class="card-content">
+        <h3>Warm Hoodie</h3>
+        <p>Thick & stylish winter hoodie.</p>
+        <p class="price">₹999 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smart Watch" />
+      <div class="card-content">
+        <h3>Smart Watch</h3>
+        <p>Track your time & fitness elegantly.</p>
+        <p class="price">₹1999 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Graphic Tee" />
+      <div class="card-content">
+        <h3>Graphic Tee</h3>
+        <p>Trendy, vibrant designs.</p>
+        <p class="price">₹599 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://nobero.com/cdn/shop/files/WhatsAppImage2023-12-16at12.06.23PM.jpg?v=1724168700" alt="Zip-Up Hoodie" />
+      <div class="card-content">
+        <h3>Zip-Up Hoodie</h3>
+        <p>Perfect blend of comfort and style.</p>
+        <p class="price">₹1099 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.tatacliq.com/images/i12/658Wx734H/MP000000018772095_658Wx734H_202308161557111.jpeg" alt="Analog Watch" />
+      <div class="card-content">
+        <h3>Analog Watch</h3>
+        <p>Classic look with modern build.</p>
+        <p class="price">₹1299 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <!-- New Products -->
+
+    <!-- Shirts -->
+    <div class="card">
+      <img src="https://pictures.kartmax.in/live/300x410/cover/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/LMSH017993_1.JPG" alt="Formal Shirt" />
+      <div class="card-content">
+        <h3>Formal Shirt</h3>
+        <p>Perfect for office & events.</p>
+        <p class="price">₹799 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://imagescdn.allensolly.com/img/app/product/7/789983-9243508.jpg?auto=format&w=390" alt="Casual Shirt" />
+      <div class="card-content">
+        <h3>Casual Shirt</h3>
+        <p>Comfortable & stylish daily wear.</p>
+        <p class="price">₹699 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <!-- Shoes -->
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/71f0is8i4BL._AC_UY1000_.jpg" alt="Running Shoes" />
+      <div class="card-content">
+        <h3>Running Shoes</h3>
+        <p>Lightweight, perfect for sports.</p>
+        <p class="price">₹1499 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Casual Sneakers" />
+      <div class="card-content">
+        <h3>Casual Sneakers</h3>
+        <p>Everyday style & comfort.</p>
+        <p class="price">₹1299 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <!-- Snacks -->
+    <div class="card">
+      <img src="https://munchfit.in/cdn/shop/files/03_1445x.jpg?v=1719655220" alt="Healthy Nuts" />
+      <div class="card-content">
+        <h3>Healthy Nuts</h3>
+        <p>Crunchy and nutritious mix.</p>
+        <p class="price">₹399 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://rukminim3.flixcart.com/image/850/1000/xif0q/chocolate/s/y/q/210-desserts-brownie-3-cadbury-dairy-milk-silk-original-imahfjehn4tkuv2e.jpeg?q=90&crop=false" alt="Chocolate Cookies" />
+      <div class="card-content">
+        <h3>Chocolate Cookies</h3>
+        <p>Delicious sweet treats.</p>
+        <p class="price">₹299 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStohwS5ugtYwQdhM6sIulaiFG9ZZxO_c1LQw&s" alt="gifts" />
+      <div class="card-content">
+        <h3>custamized gifts</h3>
+        <p>gifts</p>
+        <p class="price">₹399 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+   
+    
+    <div class="card">
+      <img src="https://homafy.com/wp-content/uploads/2023/12/men-gift-hamper.jpeg" alt="gifts" />
+      <div class="card-content">
+        <h3>custamized gifts</h3>
+        <p>gifts</p>
+        <p class="price">₹999 <span class="discount">5% OFF</span></p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Contact us: <strong>+91 9949692732</strong> | Email: <a href="mailto:roohitsharma@045.com" style="color:#ffeb3b;">info@artofgani.com</a></p>
+    <p>&copy; 2025 Art of Gani. All rights reserved.</p>
+  </footer>
+</body>
+</html>
